@@ -1,12 +1,12 @@
 # Recommendation-System-Using-Keras
-1. importing the required libraries
+##1. importing the required libraries
 import numpy as np
 import pandas as pd
 import pickle
 import matrix_factorization_utilities
 import scipy.sparse as sp
 from scipy.sparse.linalg import svds
-2. Reading the ratings data
+##2. Reading the ratings data
 ratings = pd.read_csv(r'C:\Users\kumari\Desktop\fintech\AI & ML\Movie-Recommendation-System-master\Dataset\ratings.csv')
 3. Checking if the user has rated the same movie twice, in that case we just take max of them
 ratings_df = ratings.groupby(['userId','movieId']).aggregate(np.max)
